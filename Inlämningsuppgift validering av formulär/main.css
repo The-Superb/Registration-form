@@ -1,0 +1,204 @@
+body{
+    background-image: linear-gradient(0deg,#8b03a24d,#6b037c4d), url('https://thumbs.gfycat.com/ComplexNiceBadger-size_restricted.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+}
+
+#regForm{
+    margin-top: 1rem;
+}
+
+.box{
+    background: rgba(0, 0, 0, 0.575);
+    border-radius:5px;
+    max-width: 50rem;
+	padding: 1rem;
+}
+
+.user{
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    background: -webkit-linear-gradient(#ad00cce3,#8a03a286);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.h1-regForm{
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+#regForm .title{
+    font-size: 1.5rem;
+}
+
+.p-i{
+    font-size: 1.2rem;
+}
+
+hr{
+    background-color: #ad00cc;
+}
+
+.gdpr{
+    color: #ad00cc;
+}
+.gdpr:hover{
+    color: #c000e2;
+}
+
+button{
+    background-color: #ad00cc !important;
+    color: #fff;
+    border: none !important;
+    border-radius: 10px !important;
+    font-size: 1.15rem !important;
+}
+button:hover{
+    background-color: #c000e2 !important;
+    border: none !important;
+}
+
+textarea{
+    resize: none;
+}
+
+#loginForm{
+    width: 22.5rem;
+    background: #ffffffe1;
+    height: 36.25rem;
+    padding: 5rem 2.5rem;
+    border-radius: 5px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#loginForm h1{
+    text-align: center;
+    margin-bottom: 3.75rem;
+    color: #8a03a2;
+    font-weight: 700;
+}
+
+.text-b{
+    border-bottom: 2px solid #adadad;
+    position: relative;
+    margin: 1.875rem 0;
+}
+
+.text-b input{
+    font-size: 15px;
+    color: #333;
+    border: none;
+    outline: none;
+    background: none;
+    width: 100%;
+    padding: 0 5px;
+    height: 2.5rem;
+}
+
+.text-b span::before{
+    content: attr(data-placeholder);
+    color: #adadad;
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.text-b span::after{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    left: 0;
+    top: 2.46rem;
+    background: linear-gradient(120deg,#8a03a2,#c354d6);
+    transition: 0.5s;
+}
+
+.focus + span::before{
+    top: -5px;
+}
+.focus + span::after{
+    width: 100%;
+}
+
+.login-btn{
+    display: block;
+    width: 100% !important;
+    height: 3.125rem;
+    border: none;
+    background: linear-gradient(120deg,#8a03a2,#c354d6,#5b036b);
+    background-size: 200%;
+    outline: none;
+    transition: 0.5s;
+}
+
+.login-btn:hover{
+    background-position: right;
+}
+
+.index-btn{
+    display: block;
+    width: 100% !important;
+    padding: 1rem;
+    border: none;
+    background: linear-gradient(120deg,rgb(36, 140, 123),rgb(107, 226, 206),rgb(23, 104, 90));
+    background-size: 200%;
+    outline: none;
+    transition: 0.5s;
+    border-radius: 10px;
+}
+
+.index-btn:hover{
+    background-position: right;
+}
+
+.bottom-text{
+    margin-top: 3.75rem;
+    text-align: center;
+    font-size: 13px;
+    color: #333;
+    font-weight: 600;
+}
+
+
+input[type=number]{
+    -moz-appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
+.bg-index{
+    background-image: url("https://images.pexels.com/photos/853199/pexels-photo-853199.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-size: cover;
+    background-repeat: repeat;
+}
+
+.h1-index{
+    color: rgb(107, 226, 206) !important;
+}
+
+@media (min-width: 768px){
+    .box{
+        margin-top: 8rem;
+        margin-bottom: 8rem;
+        background: rgba(0, 0, 0, 0.575);
+        border-radius:5px;
+        max-width: 50rem;
+        max-height: 53rem;
+        padding: 1rem;
+    }
+}

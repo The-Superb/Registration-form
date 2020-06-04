@@ -1,0 +1,117 @@
+    // validate regForm start
+    // all id:s
+    $('#firstName').focus(function(){
+        checkName();
+    });
+
+    $('#lastName').focus(function(){
+        checkName();
+    });
+
+    $('#country').focus(function(){
+        checkCountry();
+    });
+
+    $('#streetAddress').focus(function(){
+        checkStreetAddress();
+    });
+
+    $('#zipcode').focus(function(){
+        checkZipcode();
+    });
+
+    $('#city').focus(function(){
+        checkCity();
+    });
+
+    $('#email').focus(function(){
+        checkEmail();
+    });
+
+    $('#username').focus(function(){
+        checkUsername();
+    });
+
+    $('#password').focus(function(){
+        checkPassword();
+    });
+
+    $('#confirmPassword').focus(function(){
+        checkConfirmPassword();
+    });
+
+    $('#defaultCheck1').focus(function(){
+        checkDefaultCheck1();
+    });
+
+    // // all functions
+    function checkUsername(){
+        let username_lenght = $('#firstName', '#lastName').val().lenght;
+
+        if(username_lenght < 2){
+            $('#firstName').css('border-color', '#ed2939', 'border-width', '2px')
+        }
+    }
+
+
+
+
+
+    $('regForm').validate({
+        rules: {
+            firstName: 'required',
+            lastName: 'required',
+            username:{
+                required: true,
+                minlenght: 2
+            },
+            password: {
+                required: true,
+                minlenght: 8
+            },
+            confirmPassword:{
+                required: true,
+                minlenght: 8,
+                equalTo: '#password'
+            },
+            email:{
+                required: true,
+                email: true
+            },
+        }
+    })
+
+    $('username').focus(function(){
+        let firstName = $('#firstName').val();
+        let lastName = $('#lastName').val();
+        if(firstName && lastName && this.value){
+            this.value = firstName + '.' + lastName;
+        }
+    });
+
+
+
+
+    function empty(id){
+        if($(id).val() === ''){
+            $(id).addClass('is-invalid')
+            $(id).focus();
+        }else{
+            $(id).removeClass('is-invalid')
+            $(id).addClass('is-valid')
+        }
+    }
+
+    $('#firstName').keyup(function(){
+        empty('#firstName')
+    })
+    $('#lastName').keyup(function(){
+        empty('#lastName')
+    })
+
+    $('#regForm').submit((e) =>{
+        e.preventDefault();
+
+        empty('#firstName');
+        empty('#lastName');
+    })
